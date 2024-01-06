@@ -1,0 +1,1093 @@
+/*================================================
+Default CSS
+=================================================*/
+$main-color: #ea512e;
+$white-color: #ffffff;
+$black-color: #000000;
+
+//dark version switch css
+.dark-version {
+    position: fixed;
+    z-index: 1;
+    right: 95px;
+    bottom: 45px;
+
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+
+        input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+    }
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: $main-color;
+        transition: 0.4s;
+
+        &:before {
+            position: absolute;
+            content: "";
+            height: 30px;
+            width: 30px;
+            left: 2.5px;
+            bottom: 4px;
+            top: 0;
+            bottom: 0;
+            margin: auto 0;
+            transition: 0.4s;
+            box-shadow: 0 0px 15px #2020203d;
+            background: white url('https://i.ibb.co/FxzBYR9/night.png');
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+    input:checked + .slider {
+        background-color: $main-color;
+    }
+    input:focus + .slider {
+        box-shadow: 0 0 1px $main-color;
+    }
+    input:checked + .slider:before {
+        -webkit-transform: translateX(24px);
+        -ms-transform: translateX(24px);
+        transform: translateX(24px);
+        background: white url('https://i.ibb.co/7JfqXxB/sunny.png');
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .slider {
+        &.round {
+            border-radius: 50px;
+
+            &:before {
+                border-radius: 50%;
+            } 
+        }
+    }
+}
+
+// Dark & Light CSS
+.theme-light {
+    .black-logo {
+        display: block;
+    }
+    .white-logo {
+        display: none;
+    }
+    .white-image {
+        display: block;
+    }
+    .black-image {
+        display: none;
+    }
+}
+.theme-dark {
+    .black-logo {
+        display: none;
+    }
+    .white-logo {
+        display: block;
+    }
+    .white-image {
+        display: none;
+    }
+    .black-image {
+        display: block;
+    }
+    body {
+        background-color: $black-color;
+        color: #f1f1f1;
+    }
+    p {
+        color: #f1f1f1;
+    }
+    .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+        color: $white-color;
+
+        a {
+            color: $white-color;
+
+            &:hover {
+                color: $main-color;
+            }
+        }
+    }
+    
+    .main-banner-item {
+        background-color: #0a0a11;
+        background-image: unset;
+    }
+
+    .main-navbar {
+        .navbar {
+            .navbar-nav {
+                .nav-item {
+                    a {
+                        color: $white-color;
+                        
+                        &:hover, &:focus, &.active {
+                            color: $main-color;
+                        }
+                    }
+                    &:hover, &.active {
+                        a {
+                            color: $main-color;
+                        }
+                    }
+                    .dropdown-menu {
+                        li {
+                            a {
+                                color: $black-color;
+                                
+                                &:hover, &:focus, &.active {
+                                    color: $main-color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .others-options {
+                .option-item {
+                    .language-switcher {
+                        .dropdown-toggle {
+                            color: $white-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .navbar-area {
+        &.is-sticky {
+            background-color: #0a0a11 !important;
+        }
+    }
+
+    .who-we-are-content {
+        .who-we-are-list {
+            li {
+                color: #f1f1f1;
+            }
+        }
+    }
+
+    .class-area {
+        &.bg-fdf6ed {
+            background-color: #0a0a11;
+        }
+    }
+
+    .single-class {
+        .class-content {
+            background-color: $black-color;
+            border: 1px solid #0a0a11;
+
+            h3 {
+                a {
+                    color: $white-color;
+
+                    &:hover {
+                        color: $main-color;
+                    }
+                }
+            }
+            .class-list {
+                li {
+                    color: #f1f1f1;
+                }
+            }
+        }
+    }
+
+    .teacher-area {
+        &.bg-ffffff {
+            background-color: #0a0a11;
+            background-image: unset;
+        }
+    }
+
+    .testimonials-item {
+        .testimonials-item-box {
+            background-color: #0a0a11;
+        }
+    }
+
+    .event-box-item {
+        background-color: $black-color;
+
+        .event-content {
+            h3 {
+                a {
+                    color: $white-color;
+
+                    &:hover {
+                        color: $main-color;
+                    }
+                }
+            }
+            .event-list {
+                li {
+                    color: $white-color;
+                }
+            }
+        }
+    }
+
+    .single-blog-item {
+        .blog-content {
+            background-color: #0a0a11;
+
+            .post-meta {
+                li {
+                    color: #f1f1f1;
+
+                    a {
+                        color: #f1f1f1;
+                    }
+                }
+            }
+            h3 {
+                a {
+                    color: $white-color;
+
+                    &:hover {
+                        color: $main-color;
+                    }
+                }
+            }
+        }
+    }
+
+    .activities-area {
+        background-color: #0a0a11;
+        background-image: unset;
+    }
+
+    .single-activities {
+        .activities-content {
+            h3 {
+                a {
+                    color: $white-color;
+
+                    &:hover {
+                        color: $main-color;
+                    }
+                }
+            }
+        }
+    }
+
+    .single-facilities {
+        .facilities-content {
+            h3 {
+                a {
+                    color: $white-color;
+
+                    &:hover {
+                        color: $main-color;
+                    }
+                }
+            }
+        }
+    }
+
+    .testimonials-area {
+        &.bg-color {
+            background-color: #0a0a11;
+        }
+    }
+
+    .partner-area {
+        background-color: #0a0a11;
+    }
+
+    .single-fun-fact {
+        background-color: #0a0a11;
+    }
+
+    .quote-item {
+        background-color: #0a0a11;
+
+        form {
+            .form-group {
+                .form-control {
+                    color: $white-color;
+                    border: 1px solid $black-color;
+
+                    &::placeholder {
+                        color: $white-color;
+                    }
+                    &:focus {
+                        border: 1px solid $main-color;
+
+                        &::placeholder {
+                            color: transparent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .single-tour {
+        background-color: #0a0a11;
+
+        h3 {
+            background-color: $black-color;
+        }
+    }
+
+    .newsletter-area {
+        background-color: #0a0a11;
+        border-bottom: 1px solid $black-color;
+    }
+    .newsletter-form {
+        .input-newsletter {
+            color: $white-color;
+            border: 1px solid $black-color;
+            background-color: $black-color;
+
+            &::placeholder {
+                color: $white-color;
+            }
+        }
+    }
+
+    .event-area {
+        &.event-item-two {
+            .section-title {
+                h2 {
+                    color: $white-color;
+                }
+            }
+            .event-box-item {
+                background-color: #0a0a11;
+
+                .event-content {
+                    h3 {
+                        a {
+                            background-color: $black-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .overview-content {
+        background-color: $black-color;
+    }
+
+    .pricing-table {
+        .table {
+            thead {
+                th {
+                    color: $white-color;
+                }
+            }
+            tbody {
+                tr {
+                    th {
+                        color: #f1f1f1;
+                    }
+                    td {
+                        color: #f1f1f1;
+                    }
+                }
+            }
+        }
+    }
+
+    .apply-form {
+        background-color: #0a0a11;
+
+        form {
+            .form-group {
+                .form-control {
+                    color: $white-color;
+                    border: 1px solid $black-color;
+
+                    &::placeholder {
+                        color: $white-color;
+                    }
+                    &:focus {
+                        border: 1px solid $main-color;
+
+                        &::placeholder {
+                            color: transparent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .enrollment-accordion {
+        background-color: #0a0a11;
+
+        .accordion {
+            .accordion-item {
+                border: 1px solid $black-color;
+            }
+            .accordion-title {
+                color: $white-color;
+
+                i {
+                    color: $white-color;
+                }
+            }
+            .accordion-content {
+                color: #f1f1f1;
+            }
+        }
+    }
+
+    .timetable {
+        .table {
+            thead {
+                th {
+                    border: 1px solid #0a0a11;
+                    color: $white-color;
+                }
+            }
+            tbody {
+                tr {
+                    td {
+                        border: 1px solid #0a0a11;
+                        color: $main-color;
+                    }
+                    th {
+                        border: 1px solid #0a0a11;
+                        color: $main-color;
+
+                        span {
+                            color: #f1f1f1;
+                        }
+                    }
+                    td {
+                        span {
+                            color: #f1f1f1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .faq-accordion {
+        background-color: #0a0a11;
+
+        .accordion {
+            .accordion-item {
+                border: 1px solid $black-color;
+            }
+            .accordion-title {
+                color: $white-color;
+
+                i {
+                    color: $white-color;
+                }
+            }
+            .accordion-content {
+                color: #f1f1f1;
+            }
+        }
+    }
+    
+    .faq-contact-form {
+        #contactForm {
+            .form-group {
+                .form-control {
+                    color: $white-color;
+                    border: 1px solid #0a0a11;
+
+                    &::placeholder {
+                        color: $white-color;
+                    }
+                    &:focus {
+                        border: 1px solid $main-color;
+
+                        &::placeholder {
+                            color: transparent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .login-form {
+        background-color: #0a0a11;
+
+        h2 {
+            border-bottom: 1px solid $black-color;
+        }
+        form {
+            .form-group {
+                label {
+                    color: #f1f1f1;
+                }
+                .form-control {
+                    color: $white-color;
+                    border: 1px solid $black-color;
+    
+                    &::placeholder {
+                        color: $white-color;
+                    }
+                    &:focus {
+                        border: 1px solid $main-color;
+    
+                        &::placeholder {
+                            color: transparent;
+                        }
+                    }
+                }
+            }
+            .form-check {
+                color: $white-color;
+            }
+            .lost-your-password {
+                a {
+                    color: $white-color;
+                }
+            }
+        }
+        .important-text {
+            p {
+                color: $white-color;
+
+                a {
+                    color: $main-color;
+                }
+            }
+        }
+    }
+
+    .register-form {
+        background-color: #0a0a11;
+
+        h2 {
+            border-bottom: 1px solid $black-color;
+        }
+        form {
+            .form-group {
+                label {
+                    color: #f1f1f1;
+                }
+                .form-control {
+                    color: $white-color;
+                    border: 1px solid $black-color;
+    
+                    &::placeholder {
+                        color: $white-color;
+                    }
+                    &:focus {
+                        border: 1px solid $main-color;
+    
+                        &::placeholder {
+                            color: transparent;
+                        }
+                    }
+                }
+            }
+            .form-check {
+                color: $white-color;
+            }
+            .lost-your-password {
+                a {
+                    color: $white-color;
+                }
+            }
+        }
+        .important-text {
+            p {
+                color: $white-color;
+
+                a {
+                    color: $main-color;
+                }
+            }
+        }
+    }
+
+    .terms-of-service-accordion {
+        .accordion {
+            .accordion-item {
+                border: 1px solid #0a0a11;
+            }
+            .accordion-title {
+                color: $white-color;
+
+                i {
+                    color: $white-color;
+                }
+            }
+            .accordion-content {
+                color: #f1f1f1;
+            }
+        }
+    }
+
+    .privacy-policy-accordion {
+        .accordion {
+            .accordion-item {
+                border: 1px solid #0a0a11;
+            }
+            .accordion-title {
+                color: $white-color;
+
+                i {
+                    color: $white-color;
+                }
+            }
+            .accordion-content {
+                color: #f1f1f1;
+            }
+        }
+    }
+
+    .coming-soon-content {
+        background: #0a0a11;
+
+        .newsletter-form {
+            .form-group {
+                .form-control {
+                    border-bottom: 2px solid #f1f1f1;
+                    color: $white-color;
+                    background-color: transparent;
+
+                    &::placeholder {
+                        color: $white-color;
+                    }
+                    &:focus {
+                        border-bottom: 2px solid $main-color;
+                    }
+                }
+            }
+        }
+    }
+
+    .teacher-details-information {
+        background-color: #0a0a11;
+
+        ul {
+            li {
+                color: #f1f1f1;
+
+                span {
+                    color: $white-color;
+                }
+                a {
+                    color: #f1f1f1;
+
+                    &:hover {
+                        color: $main-color;
+                    }
+                }
+            }
+        }
+    }
+
+    .teacher-details-desc {
+        .teacher-desc-content {
+            .skill-bar {
+                .progress-title {
+                    color: $white-color;
+                }
+                .progress-number-mark {
+                    color: $white-color;
+                }
+            }
+        }
+    }
+
+    .event-details-information {
+        background-color: #0a0a11;
+
+        ul {
+            li {
+                color: #f1f1f1;
+
+                span {
+                    color: $white-color;
+                }
+                a {
+                    color: #f1f1f1;
+
+                    &:hover {
+                        color: $main-color;
+                    }
+                }
+            }
+        }
+    }
+
+    .pagination-area {
+        .page-numbers {
+            background-color: #0a0a11;
+            color: $white-color;
+            box-shadow: unset;
+
+            &:hover {
+                background-color: $main-color;
+            }
+        }
+    }
+
+    .class-details-information {
+        background-color: #0a0a11;
+
+        ul {
+            li {
+                color: #f1f1f1;
+
+                span {
+                    color: $white-color;
+                }
+                a {
+                    color: #f1f1f1;
+
+                    &:hover {
+                        color: $main-color;
+                    }
+                }
+            }
+        }
+    }
+
+    .class-newsletter {
+        background-color: #0a0a11;
+    }
+
+    .class-details-desc {
+        .class-details-tab {
+            .tabs {
+                li {
+                    a {
+                        background-color: #0a0a11;
+                        color: $white-color;
+                    }
+                    &.current {
+                        a {
+                            color: $white-color;
+                            background-color: #ea512e;
+                            border-color: #ea512e;
+                        }
+                    }
+                }
+            }
+            .tab_content {
+                .tabs_item {
+                    .class-desc-content {
+                        .requirements-list {
+                            li {
+                                color: $white-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .widget-area {
+        .widget_search {
+            background-color: #0a0a11;
+
+            form {
+                .search-field {
+                    color: $white-color;
+                    border: 1px solid $black-color;
+    
+                    &::placeholder {
+                        color: $white-color;
+                    }
+                    &:focus {
+                        border: 1px solid $main-color;
+    
+                        &::placeholder {
+                            color: transparent;
+                        }
+                    }
+                }
+            }
+        }
+        .widget_ketan_posts_thumb {
+            background-color: #0a0a11;
+        }
+        .widget_categories {
+            background-color: #0a0a11;
+
+            ul {
+                li {
+                    a {
+                        color: $white-color;
+
+                        &:hover {
+                            color: $main-color;
+                        }
+                    }
+                }
+            }
+        }
+        .widget_tag_cloud {
+            background-color: #0a0a11;
+        }
+    }
+
+    .blog-details-desc {
+        .article-content {
+            .entry-meta {
+                ul {
+                    li {
+                        span {
+                            color: $white-color;
+                        }
+                        a {
+                            color: $white-color;
+
+                            &:hover {
+                                color: $main-color;
+                            }
+                        }
+                    }
+                }
+            }
+            .features-list {
+                li {
+                    color: $white-color;
+                }  
+            }          
+        }
+        .article-footer {
+            .article-tags {
+                span {
+                    color: $white-color;
+                }
+                a {
+                    color: $white-color;
+
+                    &:hover {
+                        color: $main-color;
+                    }
+                }
+            }
+            .article-share {
+                .social {
+                    li {
+                        span {
+                            color: $white-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    blockquote, .blockquote {
+        background-color: #0a0a11;
+    }
+
+    .post-navigation {
+        .navigation-links {
+            div {
+                a {
+                    color: $white-color;
+
+                    &:hover {
+                        color: $main-color;
+                    }
+                }
+            }
+        }
+    }
+
+    .comments-area {
+        .comment-author {
+            .fn {
+                color: $white-color;
+            }
+        }
+        .comment-metadata {
+            a {
+                color: #f1f1f1;
+            }
+        }
+        .comment-body {
+            .reply {
+                a {
+                    color: $white-color;
+                }
+            }
+        }
+        .comment-respond {
+            input[type="date"], input[type="time"], input[type="datetime-local"], input[type="week"], input[type="month"], input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], input[type="tel"], input[type="number"], textarea {
+                color: $white-color;
+                background-color: #0a0a11;
+
+                &::placeholder {
+                    color: $white-color;
+                }
+            }
+            .comment-form-cookies-consent {
+                label {
+                    color: #f1f1f1;
+                }
+            }
+            .form-submit {
+                input {
+                    background: $main-color;
+                    color: $white-color;
+                }
+            }
+        }
+    }
+
+    .contact-information {
+        .contact-list {
+            li {
+                span {
+                    color: #f1f1f1;
+                }
+                a {
+                    color: #f1f1f1;
+
+                    &:hover {
+                        color: $main-color;
+                    }
+                }
+            }
+        }
+    }
+
+    .contact-form {
+        #contactForm {
+            .form-group {
+                .form-control {
+                    color: $white-color;
+                    border: 1px solid #0a0a11;
+    
+                    &::placeholder {
+                        color: $white-color;
+                    }
+                    &:focus {
+                        border: 1px solid $main-color;
+    
+                        &::placeholder {
+                            color: transparent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // Responsive CSS
+
+    @media only screen and (max-width: 767px) {
+        .navbar-area {
+            background-color: #0a0a11;
+        }
+        .others-option-for-responsive {
+            .dot-menu {
+                .inner {
+                    .circle {
+                        background-color: $white-color;
+
+                        &:hover {
+                            background-color: $main-color;
+                        }
+                    }
+                }
+            }
+        }
+        .main-responsive-nav {
+            .mean-container {
+                a {
+                    &.meanmenu-reveal {
+                        color: $white-color;
+
+                        span {
+                            background-color: $white-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+        .navbar-area {
+            background-color: #0a0a11;
+        }
+        .others-option-for-responsive {
+            .dot-menu {
+                .inner {
+                    .circle {
+                        background-color: $white-color;
+
+                        &:hover {
+                            background-color: $main-color;
+                        }
+                    }
+                }
+            }
+        }
+        .main-responsive-nav {
+            .mean-container {
+                a {
+                    &.meanmenu-reveal {
+                        color: $white-color;
+
+                        span {
+                            background-color: $white-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (min-width: 992px) and (max-width: 1199px) {
+        .navbar-area {
+            background-color: #0a0a11;
+        }
+        .others-option-for-responsive {
+            .dot-menu {
+                .inner {
+                    .circle {
+                        background-color: $white-color;
+
+                        &:hover {
+                            background-color: $main-color;
+                        }
+                    }
+                }
+            }
+        }
+        .main-responsive-nav {
+            .mean-container {
+                a {
+                    &.meanmenu-reveal {
+                        color: $white-color;
+
+                        span {
+                            background-color: $white-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
